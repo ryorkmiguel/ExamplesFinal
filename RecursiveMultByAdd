@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package com.srccodes.examples;
+
+/**
+ * Write a program to multiply two values of x and y by repeatedly adding value of x  y times.
+ * Do it iteratively and recursively both.
+ * @author yorkmiguel
+ *
+ */
+
+	/**
+	 * @param args
+	 */
+	
+public class RecursiveMultByAdd
+{
+	
+// Iterative Method
+		public static int multByAddRec(int x, int y)
+			{
+				if (y == 1)
+					return x;
+				if (y == 0)
+					return 0;
+				if (y > 1)
+					return multByAddRec(x, y-1) + x;
+          
+					return -1;// it will never be executed
+			}
+
+//Recursive Method	
+	 public static int multByAddItr(int x, int y) 
+	    { 
+		 int p = 0;
+			for (int i = 1; i <= y; i++)
+			{
+				p = p + x;
+			}
+			return p;
+	    } 
+
+// Testing the methods
+
+    public static void main(String args[])
+    {
+        System.out.println("10 multiplied with 3 (Iterative) = "+multByAddItr(4,3));
+        System.out.println("10 multiplied with 3 (Recursive) = "+multByAddRec(4,3));
+    }
+}
