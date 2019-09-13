@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.srccodes.examples;
+
+/**
+ * @author yorkmiguel
+ *
+ */
+//Iterative Method
+
+public class MultiplicationByAdditionItr
+{
+static int multItr(int x, int y)
+{
+   int p = 0;
+   for (int i = 1; i <= y; i++)
+   {
+        p = p + x;
+   }
+   return p;
+}
+}
